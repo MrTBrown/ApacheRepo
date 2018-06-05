@@ -20,7 +20,7 @@
         type: Phaser.AUTO,
         width: 800,
         height: 600,
-        physics: {
+        physics: {   
             default: 'arcade',
             arcade: {
                 gravity: { y: 300 },
@@ -52,7 +52,7 @@
                 this.add.image(400,300,'sky');
                // Order! Jedes neue image liegt über dem vorigen!
                 
-                // wir benutzen die arcade physics, die uns Plattformen liefert
+                // wir benutzen die arcade physics, die uns Plattformen liefert - This creates a new Static Physics Group and assigns it to the local variable platforms
                 platforms = this.physics.add.staticGroup();
                 //wir erzeugen 4 Plattformen
                 platforms.create(400, 568, 'ground').setScale(2).refreshBody();
